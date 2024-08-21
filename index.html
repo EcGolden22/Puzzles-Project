@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My favorite pastime 🧩</title>
+    <style>
+      body {
+        background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+      }
+      .theme-button {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        background-color: #402a23;
+        color: #faf6e9;
+        font-size: 14px;
+        transition: all 150ms ease;
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+      .theme-button:hover {
+        background-color: #faf6e9;
+        color: #402a23;
+      }
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: monospace;
+      }
+      h2 {
+        text-align: center;
+        font-size: 20px;
+        font-family: monospace;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+      .intro-puzzle-pic {
+        width: 550px;
+        border-radius: 20px;
+        transition: all 150ms ease-in;
+      }
+
+      .intro-puzzle-pic:hover {
+        opacity: 65%;
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        padding: 20px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 20px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(2);
+        cursor: pointer;
+      }
+
+      .content {
+        max-width: 600px;
+        background-color: #fdffcd;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 0 auto;
+        color: #543a3a;
+      }
+      .buyButton {
+        display: block;
+        margin: 0 auto;
+        background: #ffebbb;
+        border: 3px solid #ffcab0;
+        font-size: 12px;
+        border-radius: 15px;
+        padding: 10px;
+        color: #543a3a;
+        font-family: monospace;
+        transition: all 150ms ease-in;
+        margin-top: 8px;
+      }
+      .buyButton:hover {
+        cursor: pointer;
+        filter: contrast(60%);
+      }
+      p {
+        font-family: monospace;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+      footer {
+        font-family: monospace;
+        color: #543a3a;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: #543a3a;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .dark {
+        background: linear-gradient(
+          109.6deg,
+          rgba(0, 0, 0, 0.93) 11.2%,
+          rgb(63, 61, 61) 78.9%
+        );
+        color: #faf6e9;
+      }
+      .dark .content {
+        background: #574f4c;
+        color: #fdffcd;
+      }
+      .dark a {
+        color: whitesmoke;
+      }
+      .dark footer {
+        color: #fdffcd;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <div class="content">
+      <h1>Puzzles 🧩</h1>
+      <h2><em>My favorite pastime</em></h2>
+      <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/132/922/original/hans-peter-gauster-3y1zF4hIPCg-unsplash.jpg?1720784659"
+      alt=""" class="intro-puzzle-pic" />
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/132/719/original/t-j-breshears-sxCA-SeZNAo-unsplash.jpg?1720714947"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/132/923/original/ross-sneddon-sWlDOWk0Jp8-unsplash.jpg?1720784762"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/132/721/original/ashkan-forouzani-m0l9NBCivuk-unsplash.jpg?1720715113"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/132/924/original/simon-hurry-RhYiBB-_FR8-unsplash.jpg?1720784868"
+          alt=""
+        />
+      </div>
+      <p>
+        <strong
+          >A jigsaw puzzle (with context, sometimes just jigsaw or just puzzle)
+          is a tiling puzzle that requires the assembly of often irregularly
+          shaped interlocking and mosaicked pieces, each of which typically has
+          a portion of a picture. When assembled, the puzzle pieces produce a
+          complete picture.</strong
+        >
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/Jigsaw_puzzle"
+        target="_blank"
+        class="wiki-link"
+        >Learn more 📖</a
+      >
+      <a
+        href="https://www.amazon.com/stores/AllJigsawPuzzles/Homepage/page/53893C44-D96B-4EDB-B755-D723F444EE31"
+        target="_blank"
+      >
+        <button class="buyButton">
+          <strong>Buy some puzzles! 👍</strong>
+        </button></a
+      >
+    </div>
+    <footer>
+      <strong>Coded by </strong>
+      <a href="http://www.linkedin.com/in/liz-golden" target="_blank"
+        ><em>Liz Golde</em>n</a
+      >
+      💛
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function puzzleFacts() {
+        alert("Did you know...");
+        alert(
+          "Before they were called “jigsaw puzzles,” they were named “dissected maps.”"
+        );
+        alert("Here's a fun one...");
+        alert("Puzzle lovers are called “Dissectologists.”");
+        alert(
+          "Thanks for learning with me! Now go get yourself some puzzles with the fun button below 👇"
+        );
+      }
+
+      let pictureButton = document.querySelector(".intro-puzzle-pic");
+      pictureButton.addEventListener("click", puzzleFacts);
+    </script>
+  </body>
+</html>
